@@ -1,11 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-createdDay: {{ now.Format "Monday" }}
-createdDate: {{ now.Format "January 2, 2006" }}
-updatedDay: {{ now.Format "Monday" }}
-updatedDate: {{ now.Format "January 2, 2006" }}
+date: {{ now }}
 description: 
 authors: []
 tags: []
+header_image:
 draft: true
 ---

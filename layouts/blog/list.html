@@ -13,10 +13,12 @@
                 <a class="header" href="{{ .URL }}">
                     <div class="ui segment">
                         <div class="itemTitle ui header">
-                            {{ .Params.CreatedDate}} | {{ .Title }} 
+                            <time datetime="{{ .Params.Date }}">{{ .Date.Format "January 2, 2006" }}</time>
+                            |
+                            {{ .Params.Title }}
                         </div>
                         <div class="itemContent">
-                            {{ .Description | safeHTML | truncate 75 }}
+                            {{ .Params.Description | safeHTML | truncate 75 }}
                         </div>
                     </div>
                 </a>
