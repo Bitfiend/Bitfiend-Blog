@@ -5,7 +5,7 @@
     <div class="ui inverted centered small header">
         By: 
         {{range $authors := .Params.authors }} 
-            {{  $authors }}
+            {{  $authors.name }}
         {{ end }}
     </div>
     <div class="ui segment">
