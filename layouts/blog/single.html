@@ -3,7 +3,12 @@
         {{ .Title }}
     </div>
     <div class="ui inverted centered small header">
-        By: {{range $author := .Params.authors }} {{ $author.name }} {{ end }}
+        By: 
+        {{range $authors := .Params.authors }} 
+            {{ range $author := $authors}}
+                {{ . }}
+            {{ end }}
+        {{ end }}
     </div>
     <div class="ui segment">
         {{ .Content }}
