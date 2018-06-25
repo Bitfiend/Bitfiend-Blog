@@ -4,8 +4,8 @@
     </div>
     <div class="ui inverted centered small header">
         By: 
-        {{range $authors := .Params.authors }} 
-            {{  $authors.name }}
+        {{range .Params.repeatable_group_field }} 
+            {{  .name }}
         {{ end }}
     </div>
     <div class="ui segment">
