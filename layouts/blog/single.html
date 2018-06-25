@@ -1,12 +1,12 @@
-{{define "main"}}
+{{ define "main" }}
     <div class="ui inverted centered medium header">
-        {{.Title}}
+        {{ .Title }}
     </div>
     <div class="ui inverted centered small header">
-        By: {{range .Params.Authors}} {{ . }} {{end}}
+        By: {{range .Params.Authors}} {{ .name }} {{ end}}
     </div>
     <div class="ui segment">
-        {{.Content}}
+        {{ .Content }}
     </div>
     <div class="ui inverted segment meta">
         <h3 class="ui header">Article Data:</h3>
@@ -15,15 +15,15 @@
                 <h4>Created: <time datetime="{{ .Params.Date }}">{{ .Date.Format "January 2, 2006" }}</time></h4>
             </div>
             <div class="item">
-                <h4>{{.WordCount}} Words</h4>
+                <h4>{{ .WordCount }} Words</h4>
             </div>
         </div>
         
         <div class="ui middle aligned horizontal list">
             <h3>Tags:</h3>
-            {{range .Params.Tags}}
-                <div class="item">{{ . | safeHTML}}</div>
-            {{end}}
+            {{ range .Params.Tags }}
+                <div class="item">{{ . | safeHTML }}</div>
+            {{ end }}
         </div>
     </div>
-{{end}}
+{{ end }}
